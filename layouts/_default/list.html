@@ -1,0 +1,20 @@
+<li class="articles__item">
+  <article class="article {{ if .Params.image }}article--thumb{{ end }}">
+    <a href="{{ .Permalink }}">
+      <div class="article__text">
+        <h3 class="article__head">{{ .Title }}</h3>
+        <p class="article__date">
+          <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+        </p>
+        <p class="article__body">{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}</p>
+      </div>
+      {{ if and (.Params.image) (ne .Params.image "") }}
+      <div class="article__figure" style="background-image: url({{ .Site.BaseURL }}{{ .Params.image }});">
+        <!-- <div class="article__thumb" > -->
+          <img style="display:none" src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="">
+        <!-- </div> -->
+      </div>
+      {{ end }}
+    </a>
+  </article>
+</li>

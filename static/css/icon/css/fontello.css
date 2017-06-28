@@ -1,0 +1,11 @@
+@font-face{font-family:'fontello';src:url('../font/fontello.eot?6025962');src:url('../font/fontello.eot?6025962#iefix') format('embedded-opentype'),
+url('../font/fontello.woff2?6025962') format('woff2'),
+url('../font/fontello.woff?6025962') format('woff'),
+url('../font/fontello.ttf?6025962') format('truetype'),
+url('../font/fontello.svg?6025962#fontello') format('svg');font-weight:normal;font-style:normal;}
+[class^="icon-"]:before, [class*=" icon-"]:before{font-family:"fontello";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.icon-twitter:before{content:'\f099';}
+.icon-facebook:before{content:'\f09a';}
+.icon-github-circled:before{content:'\f09b';}
+.icon-rss:before{content:'\f09e';}
+.icon-get-pocket:before{content:'\f265';}

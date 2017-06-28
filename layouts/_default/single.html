@@ -1,0 +1,60 @@
+{{ partial "header.html" . }}
+<!-- post -->
+<article class="post"　itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="post__title">{{ .Title }}</h1>
+  <p class="post__date">
+    <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+  </p>
+  <div class="post__content">
+    {{ .Content }}
+  </div>
+</article>
+<!-- /post -->
+<div class="post-ad">
+  <span class="post-ad__head">広告</span>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- diwao日記_記事下 -->
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-0140409661373704"
+    data-ad-slot="2086623214"
+    data-ad-format="auto">
+  </ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div class="post-ad__body"></div>
+</div>
+<hr class="post-hr">
+<!-- post-nav -->
+<nav class="post-nav">
+  <ol class="post-nav__list">
+    {{ if .NextInSection }}
+    <li class="post-nav__item post-nav__item--prev">
+      <a class="post-nav__link" href="{{.NextInSection.Permalink}}">
+        <p class="post-nav__label">新しい記事</p>
+        <p class="post-nav__title post-nav__item">
+          <i class="icon icon-arrow-left"></i>{{ .NextInSection.Title }}
+        </p>
+      </a>
+    </li>
+    {{ end }}
+    {{ if .PrevInSection }}
+    <li class="post-nav__item post-nav__item--next">
+      <a class="post-nav__link" href="{{.PrevInSection.Permalink}}">
+        <p class="post-nav__label">古い記事</p>
+        <p class="post-nav__title">
+          <i class="icon icon-arrow-right"></i>{{ .PrevInSection.Title }}
+        </p>
+      </a>
+    </li>
+    {{ end }}
+  </ol>
+  <div class="post-nav__menu">
+    <p class="post-nav__title">
+      <a class="post-nav__link" href="/"><i class="icon icon-menu"></i>記事一覧へ戻る</a>
+    </p>
+  </div>
+</nav>
+<!-- /post-nav -->
+{{ partial "footer.html" . }}

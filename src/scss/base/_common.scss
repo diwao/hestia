@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: $color-base;
+  color: $color-text;
+  font-family: $font-family-jp;
+  font-size: 62.5%;
+  height: auto;
+  line-height: $line-height-default;
+  width: 100%;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+a {
+  color: $color-medium;
+  text-decoration: none;
+  transition: .3s all;
+
+  &:hover {
+    color: $color-accenct;
+  }
+}
+
+pre {
+  margin: 1em auto;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.wrap {
+  font-size: $font-size-default;
+  margin: 0 auto;
+  width: 100%;
+
+  @include mq-sp {
+    font-size: 1.4rem;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1028px;
+  padding: 20px 30px;
+
+  @include mq-sp {
+    padding: 0;
+  }
+}

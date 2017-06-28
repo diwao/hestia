@@ -1,0 +1,11 @@
+name = " Hestia"
+license = "MIT"
+licenselink = ""
+description = "Hestia is a simple hugo theme."
+tags = ["blog"]
+features = ["blog", "themes"]
+min_version = 0.1
+
+[author]
+    name = "Daisuke Iwao"
+    homepage = "http://diwao.com/"

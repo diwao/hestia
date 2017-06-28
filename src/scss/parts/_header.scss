@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.header {
+  padding-top: 20px;
+  text-align: center;
+
+  &__link {
+    display: inline-block;
+    margin: 0 auto;
+    // max-width: 1028px;
+  }
+
+  &__logo {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100px;
+    min-width: 80px;
+    overflow: hidden;
+    // width: 10%;
+
+    @include mq-sp {
+      width: 50%;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.site-title {
+  color: $color-text;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  // margin: .67em 0;
+  margin: 0 auto 5px;
+}
+
+.site-desc {
+  margin-bottom: 20px;
+}
+
+.search {
+  margin: 0 auto;
+  width: 300px;
+
+  * {
+    box-sizing: content-box;
+    font-size: 1rem;
+  }
+}

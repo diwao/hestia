@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.footer {
+  background-color: $color-dark;
+  color: $color-base;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2rem;
+
+  &__item {
+    list-style-type: none;
+
+    a {
+      color: #fff;
+      display: block;
+      font-size: 3rem;
+      line-height: 1;
+
+      &:hover {
+        color: $color-accenct;
+      }
+    }
+  }
+}
